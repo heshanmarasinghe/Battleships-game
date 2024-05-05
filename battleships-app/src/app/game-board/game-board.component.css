@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgb(107, 226, 107);
+}
+
+.grid-container {
+  flex-grow: 1;
+}
+
+.ships-container {
+  width: 200px;
+  padding-left: 50px;
+}
+
+.ships-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ship-item {
+  margin-bottom: 5px;
+}
+
+.ship-item img {
+  padding-left: 30px;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+/* CSS for hit cell */
+.hit {
+  background-color: red;
+}
+
+/* CSS for miss cell */
+.miss {
+  background-color: blue;
+}
+
+/* Hide content of the cell */
+.cell {
+  visibility: hidden;
+}
+
+.feedback{
+  color: #00fff1;
+  font-size: 30px;
+  padding-top: 20px;
+  white-space: pre;
+}
+
+.reset-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #9a1e30;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #0056b3;
+}
+
+.fadeInOut {
+  transition: opacity 300ms ease-in-out;
+}

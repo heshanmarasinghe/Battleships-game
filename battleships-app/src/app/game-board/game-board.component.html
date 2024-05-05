@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="grid-container">    
+    <h1>Battleships Game</h1>
+    <table>
+      <tbody>
+        <tr *ngFor="let row of grid; let i = index">
+          <td *ngFor="let cell of row; let j = index" [ngClass]="getCellClass(cell)">
+            <div class="square" #textContainer2 (click)="disableShots ? null : fireShot(i, j)">
+              <div class="cell">{{ cell }}</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div [@anim]="animState" class="feedback" id="textContainer">{{ feedback }}</div>
+  </div>
+  <div class="ships-container">
+    <h2>Ships Remaining</h2>
+    <ul class="ships-list">
+      <li class="ship-item" *ngFor="let ship of ships" style="display: inline-flex;">{{ ship.type }}      
+        <img [src]="getShipImage(ship.type)" alt="Ship Image"></li>
+    </ul>
+  </div>
+    <button class="reset-button" (click)="resetGame()">Restart Game</button>
+</div>
